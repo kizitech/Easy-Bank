@@ -28,15 +28,19 @@
 </head>
 
 <body>
+
+  <!-- BODY OVERLAY -->
+  <div class="overlay"></div>
+
   <header class="header flex-btw px">
-    <div class="logo">
+    <div class="header-logo">
       <a href="index.html">
         <img src="images/logo.svg" alt="Logo Image">
       </a>
     </div>
 
     <div class="hamburger-menu">
-      <img src="Images/icon-hamburger.svg" alt="Hamburger menu">
+      <img id="btnHamburger" src="Images/icon-hamburger.svg" alt="Hamburger menu">
     </div>
 
     <nav class="nav-links">
@@ -52,23 +56,38 @@
     </div>
   </header>
 
+  <div class="mobile-menu">
+    <nav class="mobile-nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Blog</a>
+      <a href="#">Careers</a>
+    </nav>
+  </div>
+
   <main class="main">
     <!-- HERO SECTION -->
     <section class="hero px">
-      <div class="hero-image"></div>
-
       <div class="hero-text flex-center">
         <h1>Next generation digital banking</h1>
-      
         <p>
           Take your financial life online. Your Easybank account will be a one-stop-shop
           for spending, saving, budgeting, investing, and much more.
         </p>
-      
         <div class="btn">
           <button type="submit" class="hero-cta">Request Invite</button>
         </div>
       </div>
+
+        <div class="hero-image">
+          <img src="Images/image-mockups.png" alt="mockup image" class="mockup">
+          <picture class="intro">
+            <source media="(max-width: 799px)" srcset="Images/bg-intro-mobile.svg" />
+            <source media="(min-width: 800px)" srcset="Images/bg-intro-desktop.svg" />
+            <img src="Images/bg-intro-desktop.svg" alt="Intro Bg" />
+          </picture>
+        </div>
     </section>
 
 
@@ -271,6 +290,7 @@
   </div>
 
   <script src="./script.js"></script>
-  
+
 </body>
+
 </html>
