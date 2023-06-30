@@ -31,7 +31,6 @@ body {
 }
 
 .open {
-  position: fixed;
   overflow: hidden;
 }
 
@@ -149,14 +148,80 @@ a:hover {
   display: none;
 }
 
-.header .hamburger-menu img {
-  width: 35px;
-  height: 16px;
+/* Hide the default checkbox */
+.hamburger input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
-.open .hamburger-menu img {
-  width: 24px;
-  height: 24px;
+.hamburger {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+}
+
+.checkmark span {
+  width: 32px;
+  height: 2px;
+  position: absolute;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.checkmark span:nth-child(1) {
+  top: 10%;
+}
+
+.checkmark span:nth-child(2) {
+  top: 50%;
+}
+
+.checkmark span:nth-child(3) {
+  top: 90%;
+}
+
+.hamburger input:checked+.checkmark span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  -moz-transform: translateY(-50%) rotate(45deg);
+  -ms-transform: translateY(-50%) rotate(45deg);
+  -o-transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburger input:checked+.checkmark span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  -moz-transform: translateY(-50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) rotate(-45deg);
+  -o-transform: translateY(-50%) rotate(-45deg);
+}
+
+.hamburger input:checked+.checkmark span:nth-child(3) {
+  transform: translateX(-50px);
+  -webkit-transform: translateX(-50px);
+  -moz-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+  opacity: 0;
 }
 
 .header .nav-links {
@@ -215,7 +280,7 @@ a:hover {
   }
 
   .header .hamburger-menu {
-    display: block;
+    display: block;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
   }
 
   .header .nav-links {
